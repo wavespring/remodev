@@ -1,0 +1,18 @@
+# ベースイメージとして最新版Ubuntuを指定
+FROM ubuntu:latest
+
+# タイムゾーン設定と非対話モードの環境変数を設定
+ENV TZ=Etc/UTC
+ENV DEBIAN_FRONTEND=noninteractive
+
+# パッケージリストの更新と基本ツールのインストール
+RUN apt update && apt-get install -y \
+    tzdata \
+    curl \
+    wget \
+    vim \
+    sudo \
+    && apt clean && rm -rf /var/lib/apt/lists/*
+
+# 作業ディレクトリの設定
+WORKDIR /workspace
