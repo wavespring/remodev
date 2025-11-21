@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Tetris - Web</title>
+  <!-- Press Start 2P (retro pixel font) -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Tetris</h1>
+    <div class="game">
+      <canvas id="tetris" width="240" height="400"></canvas>
+      <aside class="hud">
+        <div class="score">Score: <span id="score">0</span></div>
+        <div class="level">Level: <span id="level">0</span></div>
+        <div class="lines">Lines: <span id="lines">0</span></div>
+        <div class="next-box">
+          <div class="label">Next</div>
+          <canvas id="next" width="80" height="80" class="next-canvas"></canvas>
+        </div>
+        <div class="controls">
+          <button id="left">◀</button>
+          <button id="rotate">⤴</button>
+          <button id="right">▶</button>
+          <button id="down">▼</button>
+          <button id="drop">Drop</button>
+          <button id="pause">Pause</button>
+          <button id="restart">Restart</button>
+        </div>
+      </aside>
+    </div>
+    <p class="hint">キーボード: ← → ↓ 回転: ↑ or Z, ハードドロップ: Space, ポーズ: P</p>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>

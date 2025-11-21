@@ -1,0 +1,35 @@
+/* Retro/original Tetris inspired styles */
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#7aa96b 0%,#486c3f 100%);color:#0b2020;font-family: 'Arial Black', Gadget, sans-serif}
+main{width:760px;max-width:95%;}
+.hud{min-width:220px;padding:12px;background:#c7e7b8;border:6px solid #2b4b22;border-radius:6px}
+.hud .score,.hud .level,.hud .lines{margin:8px 0;font-weight:700;color:#062012}
+.hud .label{font-size:12px;color:#13361f}
+.display{background:#071b0d;color:#9aff6b;padding:8px;margin-top:6px;border:2px solid #062010;font-family:monospace;font-weight:700;text-align:center}
+.next-box{margin-top:10px;padding:6px;background:#e7f6d9;border:3px solid #2b4b22;display:inline-block}
+.next-box .label{font-family:monospace;font-size:12px;color:#13361f;margin-bottom:6px}
+.next-canvas{display:block;background:#071b0d;border:2px solid #062010}
+h1{font-family:monospace;font-weight:700;text-align:center;margin:8px 0;color:#062012;letter-spacing:2px}
+
+/* Apply retro pixel font to HUD and labels */
+.hud, .hud .score, .hud .level, .hud .lines, .hud .label, .next-box .label, .display {
+  font-family: 'Press Start 2P', monospace;
+}
+.game{display:flex;gap:18px;align-items:flex-start}
+canvas{background:linear-gradient(180deg,#b7e1a0 0%,#91c06b 100%);border:8px solid #2b4b22;image-rendering:pixelated;box-shadow:inset -6px -6px 0 rgba(255,255,255,0.06), 6px 6px 0 rgba(0,0,0,0.25)}
+.hud{min-width:220px;padding:12px;background:#c7e7b8;border:6px solid #2b4b22;border-radius:6px}
+.hud .score,.hud .level,.hud .lines{margin:8px 0;font-weight:700;color:#062012}
+.hud .label{font-size:12px;color:#13361f}
+.display{background:#071b0d;color:#9aff6b;padding:8px;margin-top:6px;border:2px solid #062010;font-family:monospace;font-weight:700;text-align:center}
+.next-box{margin-top:10px;padding:6px;background:#e7f6d9;border:3px solid #2b4b22;display:inline-block}
+.next-box .label{font-family:monospace;font-size:12px;color:#13361f;margin-bottom:6px}
+.next-canvas{display:block;background:#071b0d;border:2px solid #062010}
+.controls{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.controls button{background:#2b4b22;border:3px solid #0b2a12;color:#bffdb1;padding:8px 10px;border-radius:4px;cursor:pointer;font-weight:700}
+.controls button:active{transform:translateY(1px)}
+.hint{text-align:center;color:#0b2a12;margin-top:10px;font-size:14px}
+@media (max-width:640px){
+  .game{flex-direction:column;align-items:center}
+  .hud{width:100%;display:flex;justify-content:space-around}
+}
